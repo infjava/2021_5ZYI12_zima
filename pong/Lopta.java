@@ -8,4 +8,11 @@ public class Lopta {
         this.zobrazenie.posunZvisle(85);
         this.zobrazenie.zobraz();
     }
+    
+    public void posun() {
+        this.zobrazenie.skry();
+        this.zobrazenie.posunVodorovne(5);
+        this.zobrazenie.posunZvisle(-5);
+        this.zobrazenie.zobraz();
+    }
 }

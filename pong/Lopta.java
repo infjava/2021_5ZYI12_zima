@@ -1,15 +1,11 @@
-
-/**
- * Write a description of class Lopta here.
- * 
- * @author (your name) 
- * @version (a version number or a date)
- */
 public class Lopta {
-    /**
-     * Constructor for objects of class Lopta
-     */
+    private Kruh zobrazenie;
+    
     public Lopta() {
-        // initialise instance variables
+        this.zobrazenie = new Kruh();
+        this.zobrazenie.zmenPriemer(10);
+        this.zobrazenie.posunVodorovne(125);
+        this.zobrazenie.posunZvisle(85);
+        this.zobrazenie.zobraz();
     }
 }

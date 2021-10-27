@@ -1,0 +1,16 @@
+Objekty:
+- pad1
+- pad2
+- lopta
+- hore
+- dole
+- ciselnik1
+- ciselnik2
+- prostredie
+
+Triedy:
+- Pad
+- Lopta
+- Score
+- Prostredie
+- Stena

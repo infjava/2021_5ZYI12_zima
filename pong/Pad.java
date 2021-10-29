@@ -1,5 +1,6 @@
 public class Pad {
     private Obdlznik zobrazenie;
+    private int poziciaY;
     
     public Pad(boolean jePravy) {
         this.zobrazenie = new Obdlznik();
@@ -13,13 +14,21 @@ public class Pad {
         
         this.zobrazenie.posunZvisle(75);
         this.zobrazenie.zobraz();
+        
+        this.poziciaY = 150;
     }
     
     public void posunHore() {
-        this.zobrazenie.posunZvisle(-5);
+        if (this.poziciaY >= 30) {
+            this.zobrazenie.posunZvisle(-5);
+            this.poziciaY -= 5;
+        }
     }
     
     public void posunDole() {
-        this.zobrazenie.posunZvisle(5);
+        if (this.poziciaY <= 270) {
+            this.zobrazenie.posunZvisle(5);
+            this.poziciaY += 5;
+        }
     }
 }

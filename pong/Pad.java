@@ -14,4 +14,12 @@ public class Pad {
         this.zobrazenie.posunZvisle(75);
         this.zobrazenie.zobraz();
     }
+    
+    public void posunHore() {
+        this.zobrazenie.posunZvisle(-5);
+    }
+    
+    public void posunDole() {
+        this.zobrazenie.posunZvisle(5);
+    }
 }

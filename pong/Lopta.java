@@ -15,8 +15,18 @@ public class Lopta {
         this.zobrazenie.posunVodorovne(125);
         this.zobrazenie.posunZvisle(this.poziciaY - 65);
         this.zobrazenie.zobraz();
-        this.smerX = (nahodneCisla.nextInt(2) * 2 - 1) * 5;
-        this.smerY = (nahodneCisla.nextInt(2) * 2 - 1) * 5;
+        
+        if (nahodneCisla.nextBoolean()) {
+            this.smerX = 5;
+        } else {
+            this.smerX = -5;
+        }
+        
+        if (nahodneCisla.nextBoolean()) {
+            this.smerY = 5;
+        } else {
+            this.smerY = -5;
+        }
     }
     
     public void posun() {

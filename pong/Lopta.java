@@ -45,18 +45,10 @@ public class Lopta {
     }
     
     public boolean jeMimoNaPravo() {
-        if (this.poziciaX > 295) {
-            return true;
-        } else {
-            return false;
-        }
+        return this.poziciaX > 295;
     }
     
     public boolean jeMimoNaLavo() {
-        if (this.poziciaX < 5) {
-            return true;
-        } else {
-            return false;
-        }
+        return this.poziciaX < 5;
     }
 }

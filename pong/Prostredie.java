@@ -14,4 +14,24 @@ public class Prostredie {
         Manazer manazer = new Manazer();
         manazer.spravujObjekt(this);
     }
+    
+    public void tik() {
+        this.lopta.posun();
+    }
+    
+    public void posunHore() {
+        this.hracPravy.posunPadHore();
+    }
+    
+    public void posunVpravo() {
+        this.hracPravy.posunPadDole();
+    }
+    
+    public void posunVlavo() {
+        this.hracLavy.posunPadHore();
+    }
+    
+    public void posunDole() {
+        this.hracLavy.posunPadDole();
+    }
 }

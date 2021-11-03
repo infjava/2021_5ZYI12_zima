@@ -31,6 +31,10 @@ public class Lopta {
         }
     }
     
+    public void zrus() {
+        this.zobrazenie.skry();
+    }
+    
     public void posun() {
         this.zobrazenie.skry();
         this.zobrazenie.posunVodorovne(this.smerX);

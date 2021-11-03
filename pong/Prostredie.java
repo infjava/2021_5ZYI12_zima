@@ -20,11 +20,13 @@ public class Prostredie {
         
         if (this.lopta.jeMimoNaLavo()) {
             this.hracPravy.zvysScore();
+            this.lopta.zrus();
             this.lopta = new Lopta();
         }
         
         if (this.lopta.jeMimoNaPravo()) {
             this.hracLavy.zvysScore();
+            this.lopta.zrus();
             this.lopta = new Lopta();
         }
     }

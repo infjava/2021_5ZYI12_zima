@@ -37,6 +37,7 @@ public class Lopta {
         this.zobrazenie.posunZvisle(this.smerY);
         this.zobrazenie.zobraz();
         //this.poziciaY = this.poziciaY - 5;
+        this.poziciaX += this.smerX;
         this.poziciaY += this.smerY;
         
         if (this.poziciaY <= 5 || this.poziciaY >= 295) {

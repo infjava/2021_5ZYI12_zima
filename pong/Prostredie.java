@@ -17,6 +17,16 @@ public class Prostredie {
     
     public void tik() {
         this.lopta.posun();
+        
+        if (this.lopta.jeMimoNaLavo()) {
+            this.hracPravy.zvysScore();
+            this.lopta = new Lopta();
+        }
+        
+        if (this.lopta.jeMimoNaPravo()) {
+            this.hracLavy.zvysScore();
+            this.lopta = new Lopta();
+        }
     }
     
     public void posunHore() {

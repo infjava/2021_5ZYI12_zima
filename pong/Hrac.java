@@ -14,4 +14,8 @@ public class Hrac {
     public void posunPadDole() {
         this.pad.posunDole();
     }
+    
+    public void zvysScore() {
+        this.score.zvys();
+    }
 }

@@ -46,4 +46,8 @@ public class Prostredie {
     public void posunDole() {
         this.hracLavy.posunPadDole();
     }
+    
+    public void zrus() {
+        System.exit(0);
+    }
 }

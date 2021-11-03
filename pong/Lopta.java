@@ -2,6 +2,7 @@ import java.util.Random;
 
 public class Lopta {
     private Kruh zobrazenie;
+    private int poziciaX;
     private int poziciaY;
     private int smerX;
     private int smerY;
@@ -9,6 +10,7 @@ public class Lopta {
     public Lopta() {
         Random nahodneCisla = new Random();
         this.poziciaY = nahodneCisla.nextInt(281) + 10;
+        this.poziciaX = 150;
         
         this.zobrazenie = new Kruh();
         this.zobrazenie.zmenPriemer(10);
@@ -39,6 +41,22 @@ public class Lopta {
         
         if (this.poziciaY <= 5 || this.poziciaY >= 295) {
             this.smerY = -this.smerY;
+        }
+    }
+    
+    public boolean jeMimoNaPravo() {
+        if (this.poziciaX > 295) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+    
+    public boolean jeMimoNaLavo() {
+        if (this.poziciaX < 5) {
+            return true;
+        } else {
+            return false;
         }
     }
 }

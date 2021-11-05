@@ -15,6 +15,10 @@ public class Hrac {
         this.pad.posunDole();
     }
     
+    public boolean padKolidujeS(Lopta lopta) {
+        return this.pad.kolidujeS(lopta);
+    }
+    
     public void zvysScore() {
         this.score.zvys();
     }

@@ -64,4 +64,8 @@ public class Lopta {
     public int getPoziciaY() {
         return this.poziciaY;
     }
+    
+    public void odrazOdPadu() {
+        this.smerX = -this.smerX;
+    }
 }

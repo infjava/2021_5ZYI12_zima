@@ -1,4 +1,4 @@
-public class Prostredie {
+ public class Prostredie {
     private Lopta lopta;
     private Hrac hracLavy;
     private Hrac hracPravy;
@@ -28,6 +28,10 @@ public class Prostredie {
             this.hracLavy.zvysScore();
             this.lopta.zrus();
             this.lopta = new Lopta();
+        }
+        
+        if (this.hracLavy.padKolidujeS(this.lopta) || this.hracPravy.padKolidujeS(this.lopta)) {
+            this.lopta.odrazOdPadu();
         }
     }
     

@@ -71,6 +71,6 @@ public class Lopta {
     public void odrazOdPadu() {
         this.smerX = -this.smerX;
         
-        this.rychlost++;
+        this.rychlost *= 1.5;
     }
 }

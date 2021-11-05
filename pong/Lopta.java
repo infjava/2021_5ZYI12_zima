@@ -56,4 +56,12 @@ public class Lopta {
     public boolean jeMimoNaLavo() {
         return this.poziciaX < 5;
     }
+    
+    public int getPoziciaX() {
+        return this.poziciaX;
+    }
+    
+    public int getPoziciaY() {
+        return this.poziciaY;
+    }
 }

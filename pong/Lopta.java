@@ -6,6 +6,7 @@ public class Lopta {
     private int poziciaY;
     private int smerX;
     private int smerY;
+    private int rychlost;
     
     public Lopta() {
         Random nahodneCisla = new Random();
@@ -18,16 +19,18 @@ public class Lopta {
         this.zobrazenie.posunZvisle(this.poziciaY - 65);
         this.zobrazenie.zobraz();
         
+        this.rychlost = 5;
+        
         if (nahodneCisla.nextBoolean()) {
-            this.smerX = 5;
+            this.smerX = 1;
         } else {
-            this.smerX = -5;
+            this.smerX = -1;
         }
         
         if (nahodneCisla.nextBoolean()) {
-            this.smerY = 5;
+            this.smerY = 1;
         } else {
-            this.smerY = -5;
+            this.smerY = -1;
         }
     }
     
@@ -37,12 +40,12 @@ public class Lopta {
     
     public void posun() {
         this.zobrazenie.skry();
-        this.zobrazenie.posunVodorovne(this.smerX);
-        this.zobrazenie.posunZvisle(this.smerY);
+        this.zobrazenie.posunVodorovne(this.smerX * this.rychlost);
+        this.zobrazenie.posunZvisle(this.smerY * this.rychlost);
         this.zobrazenie.zobraz();
         //this.poziciaY = this.poziciaY - 5;
-        this.poziciaX += this.smerX;
-        this.poziciaY += this.smerY;
+        this.poziciaX += this.smerX * this.rychlost;
+        this.poziciaY += this.smerY * this.rychlost;
         
         if (this.poziciaY <= 5 || this.poziciaY >= 295) {
             this.smerY = -this.smerY;
@@ -67,5 +70,7 @@ public class Lopta {
     
     public void odrazOdPadu() {
         this.smerX = -this.smerX;
+        
+        this.rychlost++;
     }
 }

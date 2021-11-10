@@ -1,15 +1,11 @@
-
-/**
- * Write a description of class Ucet here.
- * 
- * @author (your name) 
- * @version (a version number or a date)
- */
 public class Ucet {
-    /**
-     * Constructor for objects of class Ucet
-     */
-    public Ucet() {
-        // initialise instance variables
+    private String vlastnik;
+    private long sumaVCentoch;
+    private String cisloUctu;
+    
+    public Ucet(String vlastnik, String cisloUctu) {
+        this.sumaVCentoch = 0;
+        this.vlastnik = vlastnik;
+        this.cisloUctu = cisloUctu;
     }
 }

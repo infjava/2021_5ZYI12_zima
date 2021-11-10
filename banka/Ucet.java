@@ -14,15 +14,23 @@ public class Ucet {
     }
     
     public void vlozPeniaze(double suma) {
-        this.sumaVCentoch += suma * 100;
+        if (suma > 0) {
+            this.sumaVCentoch += suma * 100;
+        } else {
+            System.out.println("Chybna suma");
+        }
     }
     
     public void vyberPeniaze(double suma) {
-        double vkladanaSumaVCentoch = suma * 100;
-        if (vkladanaSumaVCentoch <= this.sumaVCentoch) {
-            this.sumaVCentoch -= vkladanaSumaVCentoch;
+        if (suma > 0) {
+            double vkladanaSumaVCentoch = suma * 100;
+            if (vkladanaSumaVCentoch <= this.sumaVCentoch) {
+                this.sumaVCentoch -= vkladanaSumaVCentoch;
+            } else {
+                System.out.println("Na to nemas dost prostriedkov");
+            }
         } else {
-            System.out.println("Na to nemas dost prostriedkov");
+            System.out.println("Chybna suma");
         }
     }
 }

@@ -18,6 +18,11 @@ public class Ucet {
     }
     
     public void vyberPeniaze(double suma) {
-        this.sumaVCentoch -= suma * 100;
+        double vkladanaSumaVCentoch = suma * 100;
+        if (vkladanaSumaVCentoch <= this.sumaVCentoch) {
+            this.sumaVCentoch -= vkladanaSumaVCentoch;
+        } else {
+            System.out.println("Na to nemas dost prostriedkov");
+        }
     }
 }

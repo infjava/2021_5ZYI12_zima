@@ -1,15 +1,6 @@
-
-/**
- * Write a description of class Banka here.
- * 
- * @author (your name) 
- * @version (a version number or a date)
- */
 public class Banka {
-    /**
-     * Constructor for objects of class Banka
-     */
-    public Banka() {
-        // initialise instance variables
+    public Ucet zalozUcet(String vlastnik) {
+        String cisloUctu = "SK1212345678";
+        return new Ucet(vlastnik, cisloUctu);
     }
 }

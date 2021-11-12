@@ -15,14 +15,14 @@ public class Banka {
         int cisloUctu2 = nahodneCisla.nextInt(100000);
         
         BigInteger ibanPreVypocetKontrolnehoCisla =
-            new BigInteger(String.format("%s000000%5d%5d282000",
+            new BigInteger(String.format("%s000000%05d%05d282000",
                 this.kodBanky, cisloUctu1, cisloUctu2));
         
         int kontrolneCislo = ibanPreVypocetKontrolnehoCisla
             .mod(new BigInteger("97"))
             .intValue();
         
-        String cisloUctu = String.format("SK%2d%s000000%5d%5d",
+        String cisloUctu = String.format("SK%02d%s000000%05d%05d",
             kontrolneCislo, this.kodBanky, cisloUctu1, cisloUctu2);
         return new Ucet(vlastnik, cisloUctu);
     }

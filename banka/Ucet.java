@@ -41,4 +41,8 @@ public class Ucet {
     public String getIban() {
         return this.cisloUctu;
     }
+    
+    public void prevedPeniaze(String ibanCiel, double suma) {
+        
+    }
 }

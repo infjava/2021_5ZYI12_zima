@@ -38,7 +38,7 @@ public class Ucet {
         this.sumaVCentoch -= vkladanaSumaVCentoch;
     }
     
-    public void prevedPeniaze(String ibanCiel, double suma) {
-        
+    public String getIban() {
+        return this.cisloUctu;
     }
 }

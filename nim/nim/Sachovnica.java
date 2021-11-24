@@ -6,8 +6,10 @@ public class Sachovnica {
                 policko.zmenStranu(15);
                 policko.posunVodorovne(15 * stlpec - 60);
                 policko.posunZvisle(15 * riadok - 50);
-                // ak je riadok + stlpec parny, policko je cierne
-                if ((riadok + stlpec) % 2 == 0) {
+                
+                // ak ma riadok + stlpec paritu roznu ako je parita vysky,
+                // policko je cierne, tym sme zafixovali farbu policka A1
+                if ((riadok + stlpec) % 2 != vyska % 2) {
                     policko.zobraz();
                 }
             }

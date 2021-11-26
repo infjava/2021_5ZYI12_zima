@@ -56,6 +56,10 @@ public class Sachovnica {
     }
     
     public Kamen polozKamen() {
+        if (this.kamen != null) {
+            return null;
+        }
+        
         this.kamen = new Kamen(this);
         if (this.jeZobrazena) {
             this.kamen.zobraz();

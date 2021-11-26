@@ -2,7 +2,9 @@ import java.util.ArrayList;
 
 public class Sachovnica {
     private ArrayList<Stvorec> policka;
+    private Kamen kamen;
     private int sirka;
+    private boolean jeZobrazena;
     
     public Sachovnica(int sirka, int vyska) {
         this.sirka = sirka;
@@ -23,18 +25,30 @@ public class Sachovnica {
                 }
             }
         }
+        
+        this.kamen = null;
+        
+        this.jeZobrazena = false;
     }
     
     public void zobraz() {
         for (Stvorec policko : this.policka) {
             policko.zobraz();
         }
+        if (this.kamen != null) {
+            this.kamen.zobraz();
+        }
+        this.jeZobrazena = true;
     }
     
     public void skry() {
+        if (this.kamen != null) {
+            this.kamen.skry();
+        }
         for (Stvorec policko : this.policka) {
             policko.skry();
         }
+        this.jeZobrazena = false;
     }
     
     public int getSirka() {
@@ -42,6 +56,10 @@ public class Sachovnica {
     }
     
     public Kamen polozKamen() {
-        return new Kamen(this);
+        this.kamen = new Kamen(this);
+        if (this.jeZobrazena) {
+            this.kamen.zobraz();
+        }
+        return this.kamen;
     }
 }

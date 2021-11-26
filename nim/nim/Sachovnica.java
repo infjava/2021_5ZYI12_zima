@@ -2,8 +2,11 @@ import java.util.ArrayList;
 
 public class Sachovnica {
     private ArrayList<Stvorec> policka;
+    private int sirka;
     
     public Sachovnica(int sirka, int vyska) {
+        this.sirka = sirka;
+        
         this.policka = new ArrayList<Stvorec>();
         
         for (int riadok = 0; riadok < vyska; riadok++) {
@@ -32,5 +35,13 @@ public class Sachovnica {
         for (Stvorec policko : this.policka) {
             policko.skry();
         }
+    }
+    
+    public int getSirka() {
+        return this.sirka;
+    }
+    
+    public Kamen polozKamen() {
+        return new Kamen(this);
     }
 }

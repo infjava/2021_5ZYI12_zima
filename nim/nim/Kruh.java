@@ -159,7 +159,6 @@ public class Kruh {
             Platno canvas = Platno.dajPlatno();
             canvas.draw(this, this.farba, new Ellipse2D.Double(this.lavyHornyX, this.lavyHornyY, 
                                                           this.priemer, this.priemer));
-            canvas.wait(10);
         }
     }
 

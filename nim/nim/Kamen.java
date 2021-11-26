@@ -15,4 +15,8 @@ public class Kamen {
     public void skry() {
         this.kamen.skry();
     }
+    
+    public void posunKamen(int x, int y) {
+        
+    }
 }

@@ -26,4 +26,12 @@ public class Kamen {
         this.poziciaX = x;
         this.poziciaY = y;
     }
+    
+    public int getPoziciaX() {
+        return this.poziciaX;
+    }
+    
+    public int getPoziciaY() {
+        return this.poziciaY;
+    }
 }

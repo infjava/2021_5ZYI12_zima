@@ -17,7 +17,11 @@ public class Nim {
     }
     
     public String getHracNaTahu() {
-        return this.menaHracov[this.indexHracaNaTahu];
+        if (this.menoVyhercu == null) {
+            return this.menaHracov[this.indexHracaNaTahu];
+        } else {
+            return null;
+        }
     }
     
     public String getVyherca() {

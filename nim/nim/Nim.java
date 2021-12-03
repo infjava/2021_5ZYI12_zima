@@ -63,4 +63,12 @@ public class Nim {
 
         this.indexHracaNaTahu = (this.indexHracaNaTahu + 1) % this.menaHracov.length;
     }
+    
+    public int getKamenX() {
+        return this.kamen.getPoziciaX();
+    }
+    
+    public int getKamenY() {
+        return this.kamen.getPoziciaY();
+    }
 }

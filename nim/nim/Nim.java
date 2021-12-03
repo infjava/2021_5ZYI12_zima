@@ -52,6 +52,12 @@ public class Nim {
         }
 
         this.indexHracaNaTahu = (this.indexHracaNaTahu + 1) % this.menaHracov.length;
+        
+        if (this.getHracNaTahu().equals("PC")) {
+            // Y < X	vlavo	X - Y
+            // X < Y	dole	Y - X
+            // X == Y	nahodne	nahodne <1, X)
+        }
     }
     
     public int getKamenX() {

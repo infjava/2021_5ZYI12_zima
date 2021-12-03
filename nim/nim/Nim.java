@@ -29,28 +29,18 @@ public class Nim {
     }
     
     public void posunDole(int oKolko) {
-        int novaX = this.kamen.getPoziciaX();
-        int novaY = this.kamen.getPoziciaY() - oKolko;
-        
-        if (novaY < 1 || oKolko <= 0) {
-            System.out.println("Nespravny pocet policok");
-            return;
-        }
-        
-        this.kamen.posunKamen(novaX, novaY);
-        
-        if (novaX == 1 && novaY == 1) {
-            this.menoVyhercu = this.getHracNaTahu();
-        }
-        
-        this.indexHracaNaTahu = (this.indexHracaNaTahu + 1) % this.menaHracov.length;
+        this.vykonajPosun(0, oKolko);
     }
     
     public void posunVlavo(int oKolko) {
-        int novaX = this.kamen.getPoziciaX() - oKolko;
-        int novaY = this.kamen.getPoziciaY();
+        this.vykonajPosun(oKolko, 0);
+    }
+    
+    private void vykonajPosun(int oKolkoX, int oKolkoY) {
+        int novaX = this.kamen.getPoziciaX() - oKolkoX;
+        int novaY = this.kamen.getPoziciaY() - oKolkoY;
         
-        if (novaX < 1 || oKolko <= 0) {
+        if (novaX < 1 || novaY < 1 || (oKolkoX <= 0 && oKolkoY <= 0)) {
             System.out.println("Nespravny pocet policok");
             return;
         }

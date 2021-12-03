@@ -11,6 +11,8 @@ public class KlikaciNim {
         
         this.vyska = vyska;
         this.sirka = sirka;
+        
+        System.out.format("Na tahu je: %s%n", this.nim.getHracNaTahu());
     }
     
     public void vyberSuradnice(int x, int y) {
@@ -26,6 +28,12 @@ public class KlikaciNim {
             } else {
                 System.out.println("Nespravny tah");
             }
+        }
+        if (this.nim.getHracNaTahu() != null) {
+            System.out.format("Na tahu je: %s%n", this.nim.getHracNaTahu());
+        }
+        if (this.nim.getVyherca() != null) {
+            System.out.format("Vyhral: %s%n", this.nim.getVyherca());
         }
     }
 }

@@ -1,3 +1,5 @@
+import java.util.Random;
+
 public class Nim {
     private Sachovnica sachovnica;
     private Kamen kamen;
@@ -53,10 +55,22 @@ public class Nim {
 
         this.indexHracaNaTahu = (this.indexHracaNaTahu + 1) % this.menaHracov.length;
         
-        if (this.getHracNaTahu().equals("PC")) {
+        if (this.getHracNaTahu() != null && this.getHracNaTahu().equals("PC")) {
             // Y < X	vlavo	X - Y
+            if (novaY < novaX) {
+                this.posunVlavo(novaX - novaY);
             // X < Y	dole	Y - X
-            // X == Y	nahodne	nahodne <1, X)
+            } else if (novaX < novaY) {
+                this.posunDole(novaY - novaX);
+            // else	nahodne	nahodne <1, X)
+            } else {
+                Random nahodneCisla = new Random();
+                if (nahodneCisla.nextBoolean()) {
+                    this.posunVlavo(nahodneCisla.nextInt(novaX - 1) + 1);
+                } else {
+                    this.posunDole(nahodneCisla.nextInt(novaY - 1) + 1);
+                }
+            }
         }
     }
     

@@ -1,11 +1,15 @@
 public class Displej {
+    private static final int VYSKA = 20;
+    private static final int SIRKA = 10;
+    private static final int VELKOST_PIXELU = 10;
+    
     public Displej() {
-        for (int y = 0; y < 20; y++) {
-            for (int x = 0; x < 10; x++) {
+        for (int y = 0; y < Displej.VYSKA; y++) {
+            for (int x = 0; x < Displej.SIRKA; x++) {
                 Stvorec pixel = new Stvorec();
-                pixel.posunZvisle(-50 + y * 15);
-                pixel.posunVodorovne(-60 + x * 15);
-                pixel.zmenStranu(14);
+                pixel.posunZvisle(-50 + y * Displej.VELKOST_PIXELU);
+                pixel.posunVodorovne(-60 + x * Displej.VELKOST_PIXELU);
+                pixel.zmenStranu(Displej.VELKOST_PIXELU - 1);
                 pixel.zmenFarbu("black");
                 pixel.zobraz();
             }

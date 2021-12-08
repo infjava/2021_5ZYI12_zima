@@ -39,6 +39,10 @@ public class Nim {
         this.vykonajPosun(oKolko, 0);
     }
     
+    public void posunSikmo(int oKolko) {
+        this.vykonajPosun(oKolko, oKolko);
+    }
+    
     private void vykonajPosun(int oKolkoX, int oKolkoY) {
         int novaX = this.kamen.getPoziciaX() - oKolkoX;
         int novaY = this.kamen.getPoziciaY() - oKolkoY;

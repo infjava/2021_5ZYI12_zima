@@ -19,12 +19,14 @@ public class KlikaciNim {
         int nimX = x / 15 + 1;
         int nimY = this.vyska - y / 15;
         if (nimX >= 1 && nimX <= this.sirka && nimY >= 1 && nimX <= this.vyska) {
+            int oKolkoX = this.nim.getKamenX() - nimX;
+            int oKolkoY = this.nim.getKamenY() - nimY;
             if (nimX == this.nim.getKamenX()) {
-                int oKolko = this.nim.getKamenY() - nimY;
-                this.nim.posunDole(oKolko);
+                this.nim.posunDole(oKolkoY);
             } else if (nimY == this.nim.getKamenY()) {
-                int oKolko = this.nim.getKamenX() - nimX;
-                this.nim.posunVlavo(oKolko);
+                this.nim.posunVlavo(oKolkoX);
+            } else if (oKolkoX == oKolkoY) {
+                this.nim.posunSikmo(oKolkoX);
             } else {
                 System.out.println("Nespravny tah");
             }

@@ -16,6 +16,7 @@ public class Nim {
         this.indexHracaNaTahu = 0;
         
         this.menoVyhercu = null;
+        this.vykonajTahPCAkTreba();
     }
     
     public String getHracNaTahu() {
@@ -54,8 +55,14 @@ public class Nim {
         }
 
         this.indexHracaNaTahu = (this.indexHracaNaTahu + 1) % this.menaHracov.length;
-        
+        this.vykonajTahPCAkTreba();
+    }
+    
+    private void vykonajTahPCAkTreba() {
         if (this.getHracNaTahu() != null && this.getHracNaTahu().equals("PC")) {
+            int novaX = this.kamen.getPoziciaX();
+            int novaY = this.kamen.getPoziciaY();
+            
             // Y < X	vlavo	X - Y
             if (novaY < novaX) {
                 this.posunVlavo(novaX - novaY);

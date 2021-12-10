@@ -3,9 +3,11 @@ public class Displej {
     private static final int SIRKA = 10;
     private static final int VELKOST_PIXELU = 10;
     
+    private static Displej instancia;
+    
     private final Stvorec[][] pixely;
     
-    public Displej() {
+    private Displej() {
         this.pixely = new Stvorec[Displej.VYSKA][Displej.SIRKA];
         
         for (int y = 0; y < Displej.VYSKA; y++) {
@@ -20,6 +22,13 @@ public class Displej {
                 this.pixely[y][x] = pixel;
             }
         }
+    }
+    
+    public static Displej getInstancia() {
+        if (Displej.instancia == null) {
+            Displej.instancia = new Displej();
+        }
+        return Displej.instancia;
     }
     
     public void nastav(int x, int y, boolean svieti) {

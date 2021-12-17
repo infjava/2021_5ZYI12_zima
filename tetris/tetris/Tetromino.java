@@ -3,6 +3,14 @@ public class Tetromino {
     private int poziciaY;
     private boolean[][] tvar;
     
+    public Tetromino(TvarTetromina tvar) {
+        this.poziciaX = (Displej.SIRKA - tvar.getMaticaTvaru()[0].length) / 2;
+        this.poziciaY = 0;
+        this.tvar = tvar.getMaticaTvaru();
+        
+        this.zobraz();
+    }
+    
     public Tetromino(boolean[][] tvar) {
         this.poziciaX = (Displej.SIRKA - tvar[0].length) / 2;
         this.poziciaY = 0;

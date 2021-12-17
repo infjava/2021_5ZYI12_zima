@@ -1,3 +1,5 @@
+import java.util.Random;
+
 public enum TvarTetromina {
     I(new boolean[][] {{true, true, true, true}}),
     O(new boolean[][] {{true, true}, {true, true}}),
@@ -15,5 +17,11 @@ public enum TvarTetromina {
     
     public boolean[][] getMaticaTvaru() {
         return this.maticaTvaru;
+    }
+    
+    public static TvarTetromina getNahodny() {
+        Random nahodneCisla = new Random();
+        TvarTetromina[] vsetkyTvary = TvarTetromina.values();
+        return vsetkyTvary[nahodneCisla.nextInt(vsetkyTvary.length)];
     }
 }

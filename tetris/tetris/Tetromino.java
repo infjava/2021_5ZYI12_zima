@@ -41,6 +41,28 @@ public class Tetromino {
         this.zobraz();
     }
     
+    public void otoc() {
+        this.skry();
+        
+        int staraSirka = this.tvar[0].length;
+        int staraVyska = this.tvar.length;
+        
+        boolean[][] novyTvar = new boolean[staraSirka][staraVyska];
+        
+        for (int staraY = 0; staraY < staraVyska; staraY++) {
+            for (int staraX = 0; staraX < staraSirka; staraX++) {
+                int novaY = staraX;
+                int novaX = staraVyska - 1 - staraY;
+                
+                novyTvar[novaY][novaX] = this.tvar[staraY][staraX];
+            }
+        }
+        
+        this.tvar = novyTvar;
+        
+        this.zobraz();
+    }
+    
     private void skry() {
         for (int y = 0; y < this.tvar.length; y++) {
             for (int x = 0; x < this.tvar[y].length; x++) {

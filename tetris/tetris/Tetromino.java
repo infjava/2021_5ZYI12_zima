@@ -12,18 +12,30 @@ public class Tetromino {
     }
     
     public void posunDole() {
+        if (this.poziciaY + this.tvar.length >= Displej.VYSKA) {
+            return;
+        }
+        
         this.skry();
         this.poziciaY++;
         this.zobraz();
     }
     
     public void posunVlavo() {
+        if (this.poziciaX <= 0) {
+            return;
+        }
+        
         this.skry();
         this.poziciaX--;
         this.zobraz();
     }
     
     public void posunVpravo() {
+        if (this.poziciaX + this.tvar[0].length >= Displej.SIRKA) {
+            return;
+        }
+        
         this.skry();
         this.poziciaX++;
         this.zobraz();

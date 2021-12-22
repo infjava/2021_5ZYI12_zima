@@ -25,4 +25,8 @@ public class Hra {
     public void posunVpravo() {
         this.padajuce.posunVpravo();
     }
+    
+    public void aktivuj() {
+        this.padajuce.otoc();
+    }
 }

@@ -79,6 +79,21 @@ public class Tetromino {
         return this.poziciaY + this.tvar.length >= Displej.VYSKA;
     }
     
+    public boolean maKocecku(int x, int y) {
+        int tvarX = x - this.poziciaX;
+        int tvarY = y - this.poziciaY;
+        
+        if (tvarX < 0 || tvarX >= this.tvar[0].length) {
+            return false;
+        }
+        
+        if (tvarY < 0 || tvarY >= this.tvar.length) {
+            return false;
+        }
+        
+        return this.tvar[tvarY][tvarX];
+    }
+    
     private void skry() {
         for (int y = 0; y < this.tvar.length; y++) {
             for (int x = 0; x < this.tvar[y].length; x++) {

@@ -75,6 +75,10 @@ public class Tetromino {
         this.zobraz();
     }
     
+    public boolean jeUplneDole() {
+        return this.poziciaY + this.tvar.length >= Displej.VYSKA;
+    }
+    
     private void skry() {
         for (int y = 0; y < this.tvar.length; y++) {
             for (int x = 0; x < this.tvar[y].length; x++) {

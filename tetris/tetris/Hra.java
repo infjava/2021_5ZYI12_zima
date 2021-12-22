@@ -12,6 +12,10 @@ public class Hra {
     
     public void tik() {
         this.padajuce.posunDole();
+        
+        if (this.padajuce.jeUplneDole()) {
+            this.padajuce = new Tetromino(TvarTetromina.getNahodny());
+        }
     }
     
     public void posunVlavo() {
